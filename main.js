@@ -1,3 +1,11 @@
-import getType from './getType.js'
 
-console.log(getType('Hello world'));
+const ulEl = document.querySelector('ul')
+
+for(let i = 0; i < 3; i+=1){
+  const li = document.createElement('li')
+  li.textContent = `list-${i+1}`
+  li.addEventListener('click', function(){
+    console.log(li.textContent)
+  })
+  ulEl.appendChild(li)
+}
