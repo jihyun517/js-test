@@ -1,11 +1,9 @@
+const timer = setTimeout(()=>{
+  console.log('jihyun')
+}, 5000)
 
-const ulEl = document.querySelector('ul')
+const h1El = document.querySelector('h1')
 
-for(let i = 0; i < 3; i+=1){
-  const li = document.createElement('li')
-  li.textContent = `list-${i+1}`
-  li.addEventListener('click', function(){
-    console.log(li.textContent)
-  })
-  ulEl.appendChild(li)
-}
+h1El.addEventListener('click', ()=>{
+  clearTimeout(timer)
+})
