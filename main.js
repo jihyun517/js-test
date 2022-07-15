@@ -1,9 +1,10 @@
-const timer = setTimeout(()=>{
-  console.log('jihyun')
-}, 5000)
+function timeout(cb) {
+  setTimeout(()=>{
+    console.log('jihyun')
+    cb()
+  }, 5000)
+}
 
-const h1El = document.querySelector('h1')
-
-h1El.addEventListener('click', ()=>{
-  clearTimeout(timer)
+timeout(() => {
+  console.log('Done!')
 })
