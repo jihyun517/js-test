@@ -1,24 +1,25 @@
-// function User (first, last){
-//   this.firstName = first
-//   this.lastName = last
-// }
-
-// User.prototype.getFullName = function(){
-//   return `I'm ${this.firstName} ${this.lastName}.`
-// }
-
-class User{
-  constructor(first, last){
-    this.firstName = first
-    this.lastName = last
+class Animal {
+  constructor(type, name){
+    this.type = type
+    this.name = name
   }
-  getFullName(){
-    return `I'm ${this.firstName} ${this.lastName}.`
+  getIntroduce(){
+    console.log(`I'm ${this.type}. My name is ${this.name}.`)
   }
 }
 
-const jihyun = new User('jihyun', 'Kim')
-const jiwon = new User('jiwon', 'Min')
+class Cat extends Animal{
+  constructor(type, name, say){
+    super(type, name)
+    this.say = say
+  }
+  getSay(){
+    super.getIntroduce()
+    console.log(`I say ${this.say}.`)
+  }
+}
 
-console.log(jihyun.getFullName())
-console.log(jiwon.getFullName())
+const myCat = new Cat('cat', 'Mong', 'Myo~')
+
+console.log(myCat)
+myCat.getSay()
