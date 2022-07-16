@@ -1,15 +1,12 @@
-function User (first, last){
-  this.firstName = first
-  this.lastName = last
+const jihyun = {
+  name: 'jihyun',
+  normal: function(){
+    console.log(this.name)
+  },
+  arrow: () => {
+    console.log(this.name)
+  }
 }
 
-
-User.prototype.getFullName = function(){
-  return `I'm ${this.firstName} ${this.lastName}.`
-}
-
-const jihyun = new User('jihyun', 'Kim')
-const jiwon = new User('jiwon', 'Min')
-
-console.log(jihyun.getFullName())
-console.log(jiwon.getFullName())
+jihyun.normal()
+jihyun.arrow()
