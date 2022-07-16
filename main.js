@@ -1,12 +1,24 @@
-const jihyun = {
-  name: 'jihyun',
-  normal: function(){
-    console.log(this.name)
-  },
-  arrow: () => {
-    console.log(this.name)
+// function User (first, last){
+//   this.firstName = first
+//   this.lastName = last
+// }
+
+// User.prototype.getFullName = function(){
+//   return `I'm ${this.firstName} ${this.lastName}.`
+// }
+
+class User{
+  constructor(first, last){
+    this.firstName = first
+    this.lastName = last
+  }
+  getFullName(){
+    return `I'm ${this.firstName} ${this.lastName}.`
   }
 }
 
-jihyun.normal()
-jihyun.arrow()
+const jihyun = new User('jihyun', 'Kim')
+const jiwon = new User('jiwon', 'Min')
+
+console.log(jihyun.getFullName())
+console.log(jiwon.getFullName())
