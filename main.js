@@ -1,10 +1,15 @@
-function timeout(cb) {
-  setTimeout(()=>{
-    console.log('jihyun')
-    cb()
-  }, 5000)
+function User (first, last){
+  this.firstName = first
+  this.lastName = last
 }
 
-timeout(() => {
-  console.log('Done!')
-})
+
+User.prototype.getFullName = function(){
+  return `I'm ${this.firstName} ${this.lastName}.`
+}
+
+const jihyun = new User('jihyun', 'Kim')
+const jiwon = new User('jiwon', 'Min')
+
+console.log(jihyun.getFullName())
+console.log(jiwon.getFullName())
