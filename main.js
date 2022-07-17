@@ -1,9 +1,16 @@
-const pi = 3.141592
+const number = [1,2,3,4]
+const fruits = ['apple', 'banana', 'cherry']
 
-const str = pi.toFixed(2)
+// const a = fruits.map(function(fruit, index){
+//   return {
+//     id : index,
+//     name : fruit
+//   }
+// })
 
-const integer = parseInt(str)
-const float = parseFloat(str)
+const a = fruits.map((fruit, index)=>({
+  id : index,
+  name : fruit
+}))
 
-console.log(integer)  //3
-console.log(float)    //3.14
+console.log(a)
