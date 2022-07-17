@@ -1,24 +1,9 @@
-class Animal {
-  constructor(type, name){
-    this.type = type
-    this.name = name
-  }
-  introduce(){
-    console.log(`I'm ${this.type}. My name is ${this.name}.`)
-  }
-}
+const pi = 3.141592
 
-class Cat extends Animal{
-  constructor(type, name, say){
-    super(type, name)
-    this.say = say
-  }
-  saying(){
-    super.introduce()
-    console.log(`I say ${this.say}.`)
-  }
-}
+const str = pi.toFixed(2)
 
-const myCat = new Cat('cat', 'Mong', 'Myo~')
+const integer = parseInt(str)
+const float = parseFloat(str)
 
-myCat.saying()
+console.log(integer)  //3
+console.log(float)    //3.14
