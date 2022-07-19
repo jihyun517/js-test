@@ -1,3 +1,5 @@
-export default function getType(data){
+export function getType(data){
   return Object.prototype.toString.call(data)
 }
+
+export const user = 'jihyun'

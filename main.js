@@ -1,4 +1,3 @@
-const fruits = ['apple', 'banana', 'cherry', 'orange']
+import {getType, user} from './getType.js'
 
-const toObject = (a, b, ...c) => ({a, b, c})
-console.log(toObject(...fruits))
+console.log(getType(user))
