@@ -1,16 +1,17 @@
 import _ from 'lodash'
 
-const userA = [
+const users=[
   {userId: '1', name: 'Jihyun'},
-  {userId: '2', name: 'Mong'}
-]
-const userB = [
-  {userId: '1', name: 'Jihyun'},
-  {userId: '3', name: 'Loopy'}
+  {userId: '2', name: 'Mong'},
+  {userId: '3', name: 'Jiwon'},
+  {userId: '4', name: 'Loopy'},
 ]
 
-const userC = userA.concat(userB)
-console.log('concat', userC)
-console.log('uniqBy', _.uniqBy(userC, 'userId'))
+const foundUser = _.find(users, {name: 'Mong'})
+const foundUserIndex = _.findIndex(users, {name: 'Jiwon'})
 
-console.log('unionBy', _.unionBy(userA, userB, 'userId'))
+console.log(foundUser)
+console.log(foundUserIndex)
+
+_.remove(users, {name: 'Jihyun'})
+console.log(users)
