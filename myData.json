@@ -1,0 +1,11 @@
+{
+  "name" : "Jihyun",    // string
+  "age" : 23,         
+  "student" : true,
+  "null" : null,
+  "friend" : {
+    "name" : "Jiwon",
+    "age" : 23
+  },
+  "friend_list" : ["Jiwon", "Huisoo"]
+}

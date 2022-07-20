@@ -1,17 +1,19 @@
-import _ from 'lodash'
+import me from './myData.json'
 
-const users=[
-  {userId: '1', name: 'Jihyun'},
-  {userId: '2', name: 'Mong'},
-  {userId: '3', name: 'Jiwon'},
-  {userId: '4', name: 'Loopy'},
-]
+console.log('me', me)
 
-const foundUser = _.find(users, {name: 'Mong'})
-const foundUserIndex = _.findIndex(users, {name: 'Jiwon'})
+const user = {
+  name: 'Jihyun',
+  age: 23,
+  friends: ['Jiwon', 'Huisoo']
+}
 
-console.log(foundUser)
-console.log(foundUserIndex)
+console.log('user', user)
 
-_.remove(users, {name: 'Jihyun'})
-console.log(users)
+const makeJSON = JSON.stringify(user)
+console.log('makeJSON', makeJSON)
+console.log('makeJSON', typeof(makeJSON))
+
+const makeJS = JSON.parse(makeJSON)
+console.log('makeJS', makeJS)
+console.log('makeJS', typeof(makeJS))
