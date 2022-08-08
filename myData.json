@@ -1,5 +1,5 @@
 {
-  "name" : "Jihyun",    // string
+  "name" : "Jihyun",  
   "age" : 23,         
   "student" : true,
   "null" : null,

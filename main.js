@@ -1,19 +1,13 @@
 import me from './myData.json'
 
-console.log('me', me)
-
 const user = {
   name: 'Jihyun',
   age: 23,
   friends: ['Jiwon', 'Huisoo']
 }
 
-console.log('user', user)
+console.log(user)
 
-const makeJSON = JSON.stringify(user)
-console.log('makeJSON', makeJSON)
-console.log('makeJSON', typeof(makeJSON))
+myStorage = window.localStorage()
 
-const makeJS = JSON.parse(makeJSON)
-console.log('makeJS', makeJS)
-console.log('makeJS', typeof(makeJS))
+myStorage.setItem('name', 'Jihyun')
